@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增重增肌执行系统</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部导航 -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h1>增重增肌执行系统</h1>
+            </div>
+            
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-page="dashboard">仪表盘</button>
+                <button class="tab-btn" data-page="plan">计划详情</button>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-stats">
+                    <div class="weight">56.9 kg</div>
+                    <div class="bmi">BMI: 18.4</div>
+                </div>
+                <div class="avatar">U</div>
+            </div>
+        </header>
+        
+        <div class="content-area">
+            <!-- 仪表盘页面 -->
+            <div id="dashboard" class="page active">
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h2>今日概览</h2>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value stat-primary">56.9</div>
+                            <div class="stat-label">当前体重 (kg)</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-value stat-secondary">18.4</div>
+                            <div class="stat-label">BMI 指数</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-value stat-accent">3150</div>
+                            <div class="stat-label">目标热量 (大卡)</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-value stat-warning">2/3</div>
+                            <div class="stat-label">训练完成次数</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-label">今日热量完成度</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 38%;"></div>
+                            <div class="progress-text">1200/3150 大卡 (38%)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-tasks"></i>
+                        <h2>今日待办</h2>
+                    </div>
+                    
+                    <div class="daily-tasks">
+                        <div class="task-card">
+                            <div class="task-header">
+                                <div class="task-title">早餐</div>
+                                <div class="task-time">7:00</div>
+                            </div>
+                            <div class="task-content">
+                                鸡蛋×2 + 牛奶250ml + 全麦面包2片
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn" data-task="breakfast">标记完成</button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card warning">
+                            <div class="task-header">
+                                <div class="task-title">超级奶昔1</div>
+                                <div class="task-time">10:00</div>
+                            </div>
+                            <div class="task-content">
+                                FoYes增肌粉 + 牛奶 + 燕麦 + 花生酱
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn btn-warning" data-task="shake1">必须完成</button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <div class="task-title">午餐</div>
+                                <div class="task-time">12:30</div>
+                            </div>
+                            <div class="task-content">
+                                鸡胸肉120g + 米饭150g + 蔬菜
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn" data-task="lunch">标记完成</button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card warning">
+                            <div class="task-header">
+                                <div class="task-title">超级奶昔2</div>
+                                <div class="task-time">15:30</div>
+                            </div>
+                            <div class="task-content">
+                                FoYes增肌粉 + 牛奶 + 燕麦 + 花生酱
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn btn-warning" data-task="shake2">必须完成</button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card">
+                            <div class="task-header">
+                                <div class="task-title">晚餐</div>
+                                <div class="task-time">19:00</div>
+                            </div>
+                            <div class="task-content">
+                                鱼肉/豆腐120g + 全麦面条150g
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn" data-task="dinner">标记完成</button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card success">
+                            <div class="task-header">
+                                <div class="task-title">训练计划</div>
+                                <div class="task-time">20:00</div>
+                            </div>
+                            <div class="task-content">
+                                全身训练A: 深蹲、俯卧撑、引体、推举
+                            </div>
+                            <div class="task-actions">
+                                <button class="btn btn-success" data-task="training">开始训练</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-chart-line"></i>
+                        <h2>体重变化趋势</h2>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="weightChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 计划详情页面 -->
+            <div id="plan" class="page">
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-utensils"></i>
+                        <h2>饮食执行计划</h2>
+                    </div>
+                    
+                    <div class="note-box">
+                        <p><strong>超级奶昔配方：</strong> 250ml全脂牛奶 + 2平勺(60g) FoYes增肌粉 + 40g生燕麦 + 15g花生酱 + 半根香蕉 → 搅拌机打匀</p>
+                    </div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>时间段</th>
+                                <th>餐次</th>
+                                <th>内容与精确用量</th>
+                                <th>热量</th>
+                                <th>完成记录</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7:00</td>
+                                <td>早餐</td>
+                                <td>鸡蛋×2个 + 全脂牛奶250ml + 全麦面包2片（或燕麦片40g用牛奶煮）</td>
+                                <td>450大卡</td>
+                                <td><button class="btn" data-meal="breakfast">标记完成</button></td>
+                            </tr>
+                            <tr class="highlight">
+                                <td>10:00</td>
+                                <td>超级奶昔1</td>
+                                <td><strong>FoYes增肌粉2平勺(60g) + 全脂牛奶250ml + 生燕麦40g + 花生酱15g + 香蕉半根</strong></td>
+                                <td><strong>750大卡</strong></td>
+                                <td><button class="btn btn-warning" data-meal="shake1">必须完成</button></td>
+                            </tr>
+                            <tr>
+                                <td>12:30</td>
+                                <td>午餐</td>
+                                <td>鸡胸肉/瘦牛肉120g（生重） + 米饭150g（熟重） + 蔬菜不限量（橄榄油炒）</td>
+                                <td>550大卡</td>
+                                <td><button class="btn" data-meal="lunch">标记完成</button></td>
+                            </tr>
+                            <tr class="highlight">
+                                <td>15:30</td>
+                                <td>超级奶昔2</td>
+                                <td><strong>FoYes增肌粉2平勺(60g) + 全脂牛奶250ml + 生燕麦40g + 花生酱15g + 香蕉半根</strong></td>
+                                <td><strong>750大卡</strong></td>
+                                <td><button class="btn btn-warning" data-meal="shake2">必须完成</button></td>
+                            </tr>
+                            <tr>
+                                <td>19:00</td>
+                                <td>晚餐</td>
+                                <td>鱼肉/豆腐120g + 全麦面条150g（干重） + 蔬菜不限量</td>
+                                <td>500大卡</td>
+                                <td><button class="btn" data-meal="dinner">标记完成</button></td>
+                            </tr>
+                            <tr>
+                                <td>训练后</td>
+                                <td>加餐</td>
+                                <td>全脂牛奶250ml（训练后10分钟内）</td>
+                                <td>150大卡</td>
+                                <td><button class="btn" data-meal="postworkout">标记完成</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="text-align:right; font-weight:bold;">每日总热量</td>
+                                <td style="font-weight:bold;">3150大卡</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="note-box warning">
+                        <p><strong>硬性规则：</strong> 两杯奶昔必须完成（占47%热量）| 训练后立即喝奶 | 23:00前睡足7小时 | 每周一空腹称重</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-dumbbell"></i>
+                        <h2>家庭力量训练计划</h2>
+                    </div>
+                    
+                    <div class="flex-container">
+                        <div class="flex-item">
+                            <h3>周一：全身训练A</h3>
+                            <table>
+                                <tr><th>动作</th><th>次数/组数</th><th>进阶要求</th></tr>
+                                <tr><td>1. 自重深蹲</td><td>18次 × 3组</td><td>每周+2次</td></tr>
+                                <tr><td>2. 俯卧撑</td><td>力竭次 × 3组</td><td>每周+1次</td></tr>
+                                <tr><td>3. 澳式引体</td><td>12次 × 3组</td><td>降低身体角度</td></tr>
+                                <tr><td>4. 书包推举</td><td>15次 × 3组</td><td>书包≥5kg</td></tr>
+                            </table>
+                        </div>
+                        
+                        <div class="flex-item">
+                            <h3>周三：全身训练B</h3>
+                            <table>
+                                <tr><th>动作</th><th>次数/组数</th><th>进阶要求</th></tr>
+                                <tr><td>1. 保加利亚分腿蹲</td><td>12次/腿 × 3组</td><td>手持重物</td></tr>
+                                <tr><td>2. 哑铃划船</td><td>12次/臂 × 3组</td><td>增加重量</td></tr>
+                                <tr><td>3. 平板支撑</td><td>45秒 × 3组</td><td>每周+5秒</td></tr>
+                                <tr><td>4. 凳上臂屈伸</td><td>15次 × 3组</td><td>脚垫高</td></tr>
+                            </table>
+                        </div>
+                        
+                        <div class="flex-item">
+                            <h3>周五：全身训练C</h3>
+                            <table>
+                                <tr><th>动作</th><th>次数/组数</th><th>进阶要求</th></tr>
+                                <tr><td>1. 弓步蹲</td><td>16次(8/腿) × 3组</td><td>手持书包</td></tr>
+                                <tr><td>2. 钻石俯卧撑</td><td>力竭次 × 3组</td><td>每周+1次</td></tr>
+                                <tr><td>3. 书包弯举</td><td>12次 × 3组</td><td>增加重量</td></tr>
+                                <tr><td>4. 反向卷腹</td><td>15次 × 3组</td><td>抬腿停顿</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="note-box">
+                        <p><strong>动作要点：</strong></p>
+                        <ul>
+                            <li><strong>澳式引体：</strong> 找稳固桌子，身体斜躺下方，胸部拉向桌面</li>
+                            <li><strong>书包负重：</strong> 用结实书包装书/水瓶（哑铃替代品）</li>
+                            <li><strong>力竭定义：</strong> 最后1次动作严重变形即停</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        <i class="fas fa-weight-scale"></i>
+                        <h2>进度追踪</h2>
+                    </div>
+                    
+                    <div class="flex-container">
+                        <div class="flex-item">
+                            <h3>体重记录（每周一空腹）</h3>
+                            <table id="weightTable">
+                                <tr><th>日期</th><th>体重(kg)</th><th>周增幅</th></tr>
+                                <tr><td><input type="date" value="2025-06-24"></td><td><input type="number" step="0.1" value="57.1"></td><td>+0.2kg</td></tr>
+                                <tr><td><input type="date"></td><td><input type="number" step="0.1"></td><td></td></tr>
+                                <tr><td><input type="date"></td><td><input type="number" step="0.1"></td><td></td></tr>
+                            </table>
+                            <button class="btn" id="addWeightBtn">添加记录</button>
+                        </div>
+                        
+                        <div class="flex-item">
+                            <h3>训练进度（每周提升）</h3>
+                            <table id="trainingProgress">
+                                <tr><th>动作</th><th>第一周</th><th>第二周</th><th>第三周</th></tr>
+                                <tr><td>深蹲次数</td><td>15</td><td><input type="number" value="18"></td><td><input type="number"></td></tr>
+                                <tr><td>俯卧撑次数</td><td>10</td><td><input type="number" value="12"></td><td><input type="number"></td></tr>
+                                <tr><td>书包重量(kg)</td><td>4</td><td><input type="number" value="5"></td><td><input type="number"></td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="note-box warning">
+                    <p><strong>医学提示：</strong> 若严格执行4周后体重无变化（尤其两杯奶昔全完成），必须就医检查：</p>
+                    <ul>
+                        <li><strong>消化内科：</strong> 胃镜（排查慢性胃炎/反流）</li>
+                        <li><strong>内分泌科：</strong> 甲功五项（排查甲亢）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>增重增肌执行系统 &copy; 2025 | 专为外胚型体质设计</p>
+            <p>数据保存在本地浏览器 | 最后更新: 2025-06-24</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
